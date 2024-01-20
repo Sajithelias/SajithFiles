@@ -1,0 +1,14 @@
+#installing libraries
+!pip install yfinance
+!pip install bs4
+#importing libraries
+import pandas as pd
+import yfinance as yf
+import requests
+from bs4 import BeautifulSoup
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+tesla_data = yf.Ticker('TSLA')
+tsla_data = tesla_data.history(period='max')
+tsla_data.reset_index(inplace=True)
+tsla_data.head()
